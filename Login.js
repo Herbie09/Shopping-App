@@ -27,7 +27,10 @@ export default function App (){
              <Text style= {styles.loginpart}>Login</Text>
           </TouchableOpacity>
 
-          <Text style={styles.signuptext}>Don't have an account? Sign Up</Text>
+            <View style={styles.signuptext}>
+                 <Text style={{color:'#fff'}}>Don't have an account?</Text>
+                 <Text>SignUp</Text>
+            </View>
         </View>
     );   
 }
@@ -53,6 +56,7 @@ const styles = StyleSheet.create({
     },
     signuptext:{
       paddingTop: 40,
+      flexDirection: 'row',
     },
     topp:{
       paddingBottom:40,
