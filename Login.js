@@ -4,15 +4,15 @@ import {View, TextInput, StyleSheet, Text, TouchableOpacity, Image} from "react-
 export default function App (){
     return(
         <View style={styles.sharp}>
-             <View style={styles.topp}>
+            <View style={styles.topp}>
              <Image
                  style={{
-                 width: 200,
-                 height: 100,
+                      width: 200,
+                      height: 100,
             }}
                  source={require('../assets/download.jpg')} />
-               <Text>Herbie's Shopping App</Text>
-             </View>
+             <Text style={{fontSize:20, fontWeight:'bold'}}>Herbie's Shopping App</Text>
+            </View>
                <TextInput style= {styles.inputbox}
                     placeholder="Email"
                     placeholderTextColor={'grey'}/>
@@ -29,7 +29,7 @@ export default function App (){
 
             <View style={styles.signuptext}>
                  <Text style={{color:'#fff'}}>Don't have an account?</Text>
-                 <Text>SignUp</Text>
+                 <TouchableOpacity><Text style={{fontWeight:'800', fontSize:16}}>Sign Up</Text></TouchableOpacity>
             </View>
         </View>
     );   
@@ -43,16 +43,22 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
      },
     inputbox: {
-      width: 200,
-      height: 25,
+      width: 230,
+      height: 31,
       backgroundColor: 'white',
       borderColor: 'black',
       borderRadius: 20 ,
-      paddingLeft: 10,
+      paddingLeft: 12,
       marginVertical: 8,
     },
     loginpart:{
-      fontSize: 14,
+      fontSize: 20,
+      fontWeight:'bold',
+      borderRadius: 20 ,
+      width:150,
+      backgroundColor:'rgba(255,255,255,0.3)',
+      textAlign:'center',
+      marginVertical:18,
     },
     signuptext:{
       paddingTop: 40,
