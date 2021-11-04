@@ -10,7 +10,9 @@ export default function App (){
                       width: 200,
                       height: 100,
             }}
-                 source={require('../assets/download.jpg')} />
+                 source={{uri:
+                   "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.theone.com%2Fimages%2Fthumbs%2F0020560_kingston-sofa-2-white_870.jpeg&imgrefurl=https%3A%2F%2Fwww.theone.com%2Fkingston-sofa-2-white-2&tbnid=FbaMPTXYu9EWgM&vet=10CEAQMyiBAWoXChMIyJuF0P_68wIVAAAAAB0AAAAAEAI..i&docid=FP-KXJccqDegiM&w=870&h=870&q=sofa&ved=0CEAQMyiBAWoXChMIyJuF0P_68wIVAAAAAB0AAAAAEAI"
+                 }} />
              <Text style={{fontSize:20, fontWeight:'bold'}}>Herbie's Shopping App</Text>
             </View>
                <TextInput style= {styles.inputbox}
