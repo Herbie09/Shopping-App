@@ -4,7 +4,15 @@ import {View, TextInput, StyleSheet, Text, TouchableOpacity, Image, Button} from
 export default function App (){
     return(
         <View style={styles.sharp}>
-         <Text style={styles.hka}>Herbie's Shopping App</Text>   
+             <View style={styles.topp}>
+                 <Image
+                    style={{
+                            width: 200,
+                            height: 100,
+            }}
+                 source={require('../assets/download.jpg')} />
+            </View>
+            <Text style={styles.hka}>Herbie's Shopping App</Text>   
                <TextInput style= {styles.inputbox}
                     placeholder="First Name"
                     placeholderTextColor={'grey'}/>
@@ -17,6 +25,11 @@ export default function App (){
                     placeholder="Email"
                     placeholderTextColor={'grey'}
                    />
+                <TextInput style= {styles.inputbox}
+                    placeholder="Password"
+                    placeholderTextColor={'grey'}
+                    secureTextEntry={true} />
+                   />        
                 <TextInput style= {styles.inputbox}
                     placeholder="Contact"
                     placeholderTextColor={'grey'}
