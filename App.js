@@ -11,7 +11,13 @@ export default function App() {
         backgroundColor='grey'
         barStyle= 'light-content'
       />
-      <Login/>
+       <NavigationContainer>
+         <MainNavigator.Navigator screenOptions={{ headerShown: true ,  }}>
+
+           <MainNavigator.Screen name="Login" component={Login} />
+           <MainNavigator.Screen name="SignUp" component={SignUp} />
+         </MainNavigator.Navigator>
+       </NavigationContainer>
     </View>
   );
 }
