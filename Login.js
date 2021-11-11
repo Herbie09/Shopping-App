@@ -1,8 +1,10 @@
 import React from "react";
 import {View, TextInput, StyleSheet, Text, TouchableOpacity, Image} from "react-native";
 
-export default function App (){
-    return(
+export default function Login (params)    
+  const navigation = params.navigation;
+
+   return(
         <View style={styles.sharp}>
             <View style={styles.topp}>
              <Image
@@ -26,6 +28,9 @@ export default function App (){
    
 
           <TouchableOpacity>
+               onPress={() => {
+              navigation.navigate("Login");
+        }}          
              <Text style= {styles.loginpart}>Login</Text>
           </TouchableOpacity>
 
