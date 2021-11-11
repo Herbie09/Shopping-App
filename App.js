@@ -7,6 +7,8 @@ import Login from './Screens/Login';
 import SignUp from './Screens/SignUp';
 
 export default function App() {
+  const Stack = createStackNavigator();
+
   return (
    <View style={styles.container}>
       <StatusBar 
