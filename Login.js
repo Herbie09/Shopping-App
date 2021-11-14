@@ -29,7 +29,7 @@ export default function Login (params)
 
           <TouchableOpacity>
                onPress={() => {
-              navigation.navigate("Login");
+               navigation.navigate("Login");
         }}          
              <Text style= {styles.loginpart}>Login</Text>
           </TouchableOpacity>
