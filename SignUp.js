@@ -1,24 +1,30 @@
 import React from "react";
 import {View, TextInput, StyleSheet, Text, TouchableOpacity, Image, Button} from "react-native";
 
-export default function App (){
+export default function SignUp (params){
+  const navigation = params.navigation;
+
     return(
         <View style={styles.sharp}>
-             <View style={styles.topp}>
-                 <Image
-                    style={{
-                            width: 200,
-                            height: 100,
+           <View style={styles.topp}>
+             <Image
+                 style={{
+                      width: 200,
+                      height: 100,
             }}
                  source={require('../assets/download.jpg')} />
-            </View>
-            <Text style={styles.hka}>Herbie's Shopping App</Text>   
+          </View>
+         <Text style={styles.hka}>Herbie's Shopping App</Text>   
                <TextInput style= {styles.inputbox}
                     placeholder="First Name"
                     placeholderTextColor={'grey'}/>
 
                <TextInput style= {styles.inputbox}
                     placeholder="Last Name"
+                    placeholderTextColor={'grey'}
+                   />
+               <TextInput style= {styles.inputbox}
+                    placeholder="Contact"
                     placeholderTextColor={'grey'}
                    />
                 <TextInput style= {styles.inputbox}
@@ -28,19 +34,20 @@ export default function App (){
                 <TextInput style= {styles.inputbox}
                     placeholder="Password"
                     placeholderTextColor={'grey'}
-                    secureTextEntry={true} />
-                   />        
-                <TextInput style= {styles.inputbox}
-                    placeholder="Contact"
-                    placeholderTextColor={'grey'}
+                    secureTextEntry={true}
                    />
+      
           <TouchableOpacity>
              <Text style={styles.signuppart}> Sign Up</Text>
           </TouchableOpacity>
 
             <View style={styles.signintext}>
                  <Text style={{color:'#fff'}}>Do you have an account?</Text>
-                 <Text style={{fontWeight:'800', fontSize:16}}>Sign In</Text>
+                <TouchableOpacity 
+                 onPress={() => 
+                    {navigation.navigate("Login");}}>
+                    <Text style={{fontWeight:'800', fontSize:16}}>Sign In</Text>
+                </TouchableOpacity> 
             </View>
         </View>
     );   
@@ -76,8 +83,8 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
     },
     hka:{
-      paddingTop:80,
-      paddingBottom:180, 
+      paddingTop:20,
+      paddingBottom:50, 
       fontSize:30,
       fontFamily:'sans-serif',
     },
