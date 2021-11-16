@@ -1,52 +1,42 @@
 import React from "react";
-import {View, TextInput, StyleSheet, Text, TouchableOpacity, Image, Button} from "react-native";
+import {View, TextInput, StyleSheet, Text, TouchableOpacity, Image} from "react-native";
 
-export default function SignUp (params){
+export default function Login (params){
   const navigation = params.navigation;
-
     return(
         <View style={styles.sharp}>
-           <View style={styles.topp}>
+            <View style={styles.topp}>
              <Image
                  style={{
                       width: 200,
                       height: 100,
             }}
-                 source={require('../assets/download.jpg')} />
-          </View>
-         <Text style={styles.hka}>Welcome!!</Text>   
+                 source={{uri:
+                   "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.theone.com%2Fimages%2Fthumbs%2F0020560_kingston-sofa-2-white_870.jpeg&imgrefurl=https%3A%2F%2Fwww.theone.com%2Fkingston-sofa-2-white-2&tbnid=FbaMPTXYu9EWgM&vet=10CEAQMyiBAWoXChMIyJuF0P_68wIVAAAAAB0AAAAAEAI..i&docid=FP-KXJccqDegiM&w=870&h=870&q=sofa&ved=0CEAQMyiBAWoXChMIyJuF0P_68wIVAAAAAB0AAAAAEAI"
+                 }} />
+             <Text style={{fontSize:20, fontWeight:'bold'}}>Shop With Us</Text>
+            </View>
                <TextInput style= {styles.inputbox}
-                    placeholder="First Name"
+                    placeholder="Email"
                     placeholderTextColor={'grey'}/>
 
                <TextInput style= {styles.inputbox}
-                    placeholder="Last Name"
-                    placeholderTextColor={'grey'}
-                   />
-               <TextInput style= {styles.inputbox}
-                    placeholder="Contact"
-                    placeholderTextColor={'grey'}
-                   />
-                <TextInput style= {styles.inputbox}
-                    placeholder="Email"
-                    placeholderTextColor={'grey'}
-                   />
-                <TextInput style= {styles.inputbox}
                     placeholder="Password"
                     placeholderTextColor={'grey'}
-                    secureTextEntry={true}
-                   />
-      
-          <TouchableOpacity>
-             <Text style={styles.signuppart}> Create Account</Text>
-          </TouchableOpacity>
-
-            <View style={styles.signintext}>
-                 <Text style={{color:'#fff'}}>Do you have an account?</Text>
-                <TouchableOpacity 
-                     onPress={() => {navigation.navigate("Login");}}>
-                     <Text style={{fontWeight:'800', fontSize:16 , paddingLeft:5}}>Sign In</Text>
-                </TouchableOpacity> 
+                    secureTextEntry={true} />
+   
+            <View>
+                 <TouchableOpacity    
+                         onPress={() => {navigation.navigate("Home");}}>
+                         <Text style= {styles.loginpart}>Login</Text>
+                 </TouchableOpacity>
+            </View>
+            <View style={styles.signuptext}>
+                 <Text style={{color:'#fff'}}>Don't have an account?</Text>
+                 <TouchableOpacity   
+                         onPress={() => {navigation.navigate("SignUp");}}>
+                         <Text style={{fontWeight:'800', fontSize:16, paddingLeft:5}}>Sign Up</Text>
+                  </TouchableOpacity>
             </View>
         </View>
     );   
@@ -57,36 +47,32 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor:'cyan',
       alignItems: 'center',
-      // justifyContent: 'center',
+      justifyContent: 'center',
      },
     inputbox: {
       width: 230,
-      height: 30,
+      height: 31,
       backgroundColor: 'white',
       borderColor: 'black',
       borderRadius: 20 ,
       paddingLeft: 12,
       marginVertical: 8,
     },
-    signuppart:{
-      fontSize: 16,
+    loginpart:{
+      fontSize: 20,
       fontWeight:'bold',
       borderRadius: 20 ,
       width:150,
-      // backgroundColor:'rgba(255,255,255,0.3)',
-      backgroundColor: 'white',
+      backgroundColor:'white',
       textAlign:'center',
-      marginVertical:16,
+      marginVertical:18,
     },
-    signintext:{
+    signuptext:{
       paddingTop: 40,
       flexDirection: 'row',
-      fontSize: 16,
     },
-    hka:{
-      paddingTop:20,
-      paddingBottom:50, 
-      fontSize:30,
-      fontFamily:'sans-serif',
+    topp:{
+      paddingBottom:40,
     },
+  
   });
