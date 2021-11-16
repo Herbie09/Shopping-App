@@ -14,7 +14,7 @@ export default function SignUp (params){
             }}
                  source={require('../assets/download.jpg')} />
           </View>
-         <Text style={styles.hka}>Herbie's Shopping App</Text>   
+         <Text style={styles.hka}>Welcome!!</Text>   
                <TextInput style= {styles.inputbox}
                     placeholder="First Name"
                     placeholderTextColor={'grey'}/>
@@ -38,15 +38,14 @@ export default function SignUp (params){
                    />
       
           <TouchableOpacity>
-             <Text style={styles.signuppart}> Sign Up</Text>
+             <Text style={styles.signuppart}> Create Account</Text>
           </TouchableOpacity>
 
             <View style={styles.signintext}>
                  <Text style={{color:'#fff'}}>Do you have an account?</Text>
                 <TouchableOpacity 
-                 onPress={() => 
-                    {navigation.navigate("Login");}}>
-                    <Text style={{fontWeight:'800', fontSize:16}}>Sign In</Text>
+                     onPress={() => {navigation.navigate("Login");}}>
+                     <Text style={{fontWeight:'800', fontSize:16 , paddingLeft:5}}>Sign In</Text>
                 </TouchableOpacity> 
             </View>
         </View>
@@ -56,7 +55,7 @@ export default function SignUp (params){
 const styles = StyleSheet.create({
     sharp: {
       flex: 1,
-      backgroundColor:'purple',
+      backgroundColor:'cyan',
       alignItems: 'center',
       // justifyContent: 'center',
      },
@@ -74,13 +73,15 @@ const styles = StyleSheet.create({
       fontWeight:'bold',
       borderRadius: 20 ,
       width:150,
-      backgroundColor:'rgba(255,255,255,0.3)',
+      // backgroundColor:'rgba(255,255,255,0.3)',
+      backgroundColor: 'white',
       textAlign:'center',
       marginVertical:16,
     },
     signintext:{
       paddingTop: 40,
       flexDirection: 'row',
+      fontSize: 16,
     },
     hka:{
       paddingTop:20,
