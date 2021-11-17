@@ -1,4 +1,4 @@
-iimport React from "react";
+import React from "react";
 import {View, TextInput, StyleSheet, Text, TouchableOpacity, Image} from "react-native";
 
 export default function Login (params){
