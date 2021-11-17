@@ -9,10 +9,11 @@ export default function SignUp (params){
            <View style={styles.topp}>
              <Image
                  style={{
-                      width: 200,
-                      height: 100,
+                      width: 260,
+                      height: 180,
+                      marginTop:50,
             }}
-                 source={require('../assets/download.jpg')} />
+                 source={require('../assets/shopping pic3.jpg')} />
           </View>
          <Text style={styles.hka}>Welcome!!</Text>   
                <TextInput style= {styles.inputbox}
@@ -33,6 +34,11 @@ export default function SignUp (params){
                    />
                 <TextInput style= {styles.inputbox}
                     placeholder="Password"
+                    placeholderTextColor={'grey'}
+                    secureTextEntry={true}
+                   />
+                <TextInput style= {styles.inputbox}
+                    placeholder="Confirm Password"
                     placeholderTextColor={'grey'}
                     secureTextEntry={true}
                    />
@@ -74,7 +80,7 @@ const styles = StyleSheet.create({
       borderRadius: 20 ,
       width:150,
       // backgroundColor:'rgba(255,255,255,0.3)',
-      backgroundColor: 'white',
+      backgroundColor: 'grey',
       textAlign:'center',
       marginVertical:16,
     },
@@ -84,7 +90,7 @@ const styles = StyleSheet.create({
       fontSize: 16,
     },
     hka:{
-      paddingTop:20,
+      paddingTop:10,
       paddingBottom:50, 
       fontSize:30,
       fontFamily:'sans-serif',
