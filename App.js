@@ -8,10 +8,9 @@ import SignUp from './Screens/SignUp';
 import Home from './Screens/Home';
 import Cart from './Screens/Cart';
 
-
   const Stack = createStackNavigator();
   export default function App() {
-  return (
+    return (
     <View style= {{flex:1}}>
       {/* <StatusBar 
         backgroundColor=''
@@ -41,7 +40,7 @@ import Cart from './Screens/Cart';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'purple',
+    backgroundColor: 'cyan',
     alignItems: 'center',
     justifyContent: 'center',
   },
