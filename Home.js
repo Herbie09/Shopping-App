@@ -1,54 +1,125 @@
 import React from 'react'
-import { View, Text, StyleSheet, Image } from 'react-native'
+import { View, Text, StyleSheet, ImageBackground} from 'react-native'
+import { TouchableOpacity } from 'react-native';
+import { Ionicons} from '@expo/vector-icons'
 
 export default function Home(params) {
     const navigation = params.navigation;
     return (
-        <View>
+        <View> 
              <View style= {styles.header}>
-                  <Text>Header Component</Text>
+                <Ionicons name="md-search" size={'3'}/>
+                <Ionicons name="md-menu" size={'3'}/>
+
              </View>
             <View style= {styles.container}>
                 <View style={styles.homebox}>
+                <TouchableOpacity> 
                      <View style={styles.mybox}>
+                     <ImageBackground
+                          style={{
+                            width: '100%',
+                            height: 200,}}
+                    source={require('../assets/OIP (2).jpg')}
+                    resizeMode="contain">
+                     </ImageBackground>
                          <Text>Box 1 </Text>
+                         <Text>$300</Text>
                      </View>
+                     </TouchableOpacity> 
                 </View>
+
                 <View style={styles.homebox}>
-                     <View style={styles.mybox}>
-                         <Text>Box 2 </Text>
+                <TouchableOpacity> 
+                     <View style={styles.mybox}> 
+                     <ImageBackground
+                          style={{
+                            width: '100%',
+                            height: 200,}}
+                    source={require('../assets/colorful-shirt-concept-mock-up_23-2148411332.jpg')}
+                    resizeMode="contain">
+                     </ImageBackground>
+                     <Text>T-Shirt </Text>
+                     <Text>$300 </Text>
                      </View>
+                     </TouchableOpacity>      
                 </View>
+
                 <View style={styles.homebox}>
+                <TouchableOpacity> 
                      <View style={styles.mybox}>
-                         <Image 
-                            style={{
-                                width: '48',
-                                height: '170',
-                      }}
-                         source={require('../assets/download.jpg')}>
-                         {/* <T>Box 3 </T ext> */}
-                         </Image>
+                         <ImageBackground
+                          style={{
+                            width: '100%',
+                            height: 200,}}
+                    source={{uri:
+                    "https://stock.adobe.com/images/e-commerce-add-to-cart-online-shopping-business-technology-internet-concept/214539382"
+
+                    }}>
+                     </ImageBackground>
+                     <Text>Box 3 </Text>
+                     <Text>$300 </Text>
                      </View>
+                     </TouchableOpacity> 
                 </View>
+
                 <View style={styles.homebox}>
+                <TouchableOpacity> 
                      <View style={styles.mybox}>
+                     <ImageBackground
+                          style={{
+                            width: '100%',
+                            height: 200,}}
+                    source={{uri:
+                    "https://stock.adobe.com/images/e-commerce-add-to-cart-online-shopping-business-technology-internet-concept/214539382"
+                    }}>
+                     </ImageBackground>
                          <Text>Box 4 </Text>
+                         <Text>$300 </Text>
                      </View>
+                     </TouchableOpacity> 
                 </View>
+
                 <View style={styles.homebox}>
+                <TouchableOpacity> 
                      <View style={styles.mybox}>
+                     <ImageBackground
+                          style={{
+                            width: '100%',
+                            height: 200,}}
+                    source={{uri:
+                    "https://stock.adobe.com/images/e-commerce-add-to-cart-online-shopping-business-technology-internet-concept/214539382"
+
+                    }}>
+                     </ImageBackground>
                          <Text>Box 5 </Text>
+                         <Text>$300 </Text>
                      </View>
+                     </TouchableOpacity> 
                 </View>
+
                 <View style={styles.homebox}>
+                <TouchableOpacity> 
                      <View style={styles.mybox}>
+                     <ImageBackground
+                          style={{
+                            width: '100%',
+                            height: 200,
+                            resize:'contain'}}
+                    source={{uri:
+                    "https://stock.adobe.com/images/e-commerce-add-to-cart-online-shopping-business-technology-internet-concept/214539382"
+
+                    }}>
+                     </ImageBackground>
                          <Text>Box 6 </Text>
+                         <Text>$300 </Text>
                      </View>
+                     </TouchableOpacity> 
                 </View>
             </View>
         </View>
     );
+ 
 }
 
 const styles = StyleSheet.create({
@@ -63,17 +134,18 @@ const styles = StyleSheet.create({
       height: 60,
       justifyContent: 'center',
       alignItems:'center',
-      backgroundColor:'#fefefe',
+      backgroundColor:'#fefefe', 
     },
     homebox:{
         padding: 7 ,
-        width: '50%',
-        height: '180%'
+        width: '50%',  
+        height: 250, 
     },
     mybox:{
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         alignItems:'center',
-        backgroundColor:'red',
+        backgroundColor:'white',
     },
   });
+
