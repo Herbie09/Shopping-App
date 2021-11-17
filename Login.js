@@ -1,4 +1,4 @@
-import React from "react";
+iimport React from "react";
 import {View, TextInput, StyleSheet, Text, TouchableOpacity, Image} from "react-native";
 
 export default function Login (params){
@@ -8,13 +8,11 @@ export default function Login (params){
             <View style={styles.topp}>
              <Image
                  style={{
-                      width: 200,
-                      height: 100,
+                      width: 260,
+                      height: 180,
             }}
-                 source={{uri:
-                   "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.theone.com%2Fimages%2Fthumbs%2F0020560_kingston-sofa-2-white_870.jpeg&imgrefurl=https%3A%2F%2Fwww.theone.com%2Fkingston-sofa-2-white-2&tbnid=FbaMPTXYu9EWgM&vet=10CEAQMyiBAWoXChMIyJuF0P_68wIVAAAAAB0AAAAAEAI..i&docid=FP-KXJccqDegiM&w=870&h=870&q=sofa&ved=0CEAQMyiBAWoXChMIyJuF0P_68wIVAAAAAB0AAAAAEAI"
-                 }} />
-             <Text style={{fontSize:20, fontWeight:'bold'}}>Shop With Us</Text>
+                 source={require('../assets/shopping pic2.jpg')} />
+             <Text style={{fontSize:20, fontWeight:'bold', marginLeft:60}}>Shop With Us</Text>
             </View>
                <TextInput style= {styles.inputbox}
                     placeholder="Email"
@@ -73,6 +71,7 @@ const styles = StyleSheet.create({
     },
     topp:{
       paddingBottom:40,
+      justifyContent:'center',
     },
   
   });
